@@ -1,0 +1,11 @@
+#body{
+  float: right;
+  background: #DEDEDE;
+  width: 80%;
+}
+
+#action{
+  padding-top: 20px;
+  padding-right: 50px;
+  text-align: end;
+}

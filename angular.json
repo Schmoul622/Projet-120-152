@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "InterfaceGestionArtiste"
+  "defaultProject": "InterfaceGestionArtiste",
+  "cli": {
+    "analytics": "3e2fa156-9539-4698-a934-fb594de83ebb"
+  }
 }

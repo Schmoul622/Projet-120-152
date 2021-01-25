@@ -1,0 +1,14 @@
+<p [hidden]="!isWrongCredentials"
+   style="color:red;">Mauvais username ou mot de passe</p>
+<div>
+  <div>
+    <label>Username</label>
+    <input [(ngModel)]="login.username" />
+  </div>
+  <div>
+    <label>Mot de passe</label>
+    <input type="password"
+           [(ngModel)]="login.password" />
+  </div>
+  <button (click)="onLogin()">Login</button>
+</div>

@@ -1,0 +1,20 @@
+.artiste{
+  width: 160px;
+  height: 200px;
+  border: 1px solid black;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#delete_artiste{
+  float: right;
+}
+
+#delete_artiste:hover{
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}
