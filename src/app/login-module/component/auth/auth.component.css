@@ -1,0 +1,69 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #ab9b9b;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+p{
+  padding-top: 110px;
+  color: #dd4646;
+  text-align: center;
+}
+
+#main{
+  height: 350px;
+  width: 400px;
+  background: #322d2d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+  border-radius: 30px;
+}
+
+#form{
+  margin-top: 50px;
+}
+
+.form_input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  transition: all 0.5s;
+  margin-left: 45px;
+  margin-top: 25px;
+  display: block;
+  padding: 10px 0;
+  border: none; /* <-- This thing here */
+  border-radius: 30px;
+}
+
+.form_input[type=text]:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+
+.form_input[type=password]:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid grey;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-size: 100% 100%;
+  margin-top: 50px;
+  margin-left: 45px;
+}
+
+

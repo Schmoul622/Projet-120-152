@@ -1,12 +1,21 @@
 .artiste{
   width: 160px;
-  height: 200px;
-  border: 1px solid black;
+  height: 180px;
+  border: 3px solid black;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
   padding: 10px;
+  border-radius: 20px;
+}
+
+.artiste input{
+  width: 90%;
+}
+
+.artiste #body{
+  padding-top: 30px;
 }
 
 #delete_artiste{
@@ -17,4 +26,10 @@
   font-weight: bold;
   color: red;
   cursor: pointer;
+}
+
+.img-fluid{
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Login} from '../../model/login';
 import {Router} from '@angular/router';
+import {AuthService} from '../../service/auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class AuthComponent implements OnInit {
 
-  login = { username: "user", password: "epsic" } as Login;
+  login = {} as Login;
   isWrongCredentials = false;
 
   constructor(private router: Router, private authService: AuthService)
@@ -17,18 +18,14 @@ export class AuthComponent implements OnInit {
     this.authService.isAuthenticated = false;
   }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
   }
 
-  onLogin(): void
-  {
+  onLogin(): void {
     this.authService.login(this.login);
-    if (this.authService.isAuthenticated)
-    {
+    if (this.authService.isAuthenticated) {
       this.router.navigate(['portal']);
-    } else
-    {
+    } else {
       this.isWrongCredentials = true;
     }
   }

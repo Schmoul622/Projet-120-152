@@ -1,11 +1,11 @@
-import { AuthGuard } from './guard/auth.guard';
+import { AuthComponent } from './component/auth/auth.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '**',
-    redirectTo: '/login'
+    path: 'login',
+    component: AuthComponent
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class LoginRoutingModule { }

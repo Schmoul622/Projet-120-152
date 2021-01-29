@@ -2,29 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { HeaderComponent } from './portal-module/component/header/header.component';
-import { SidebarComponent } from './portal-module/component/sidebar/sidebar.component';
-import { HeaderContentComponent } from './portal-module/component/header-content/header-content.component';
-import { ContentComponent } from './portal-module/component/content/content.component';
-import { ArtisteComponent } from './portal-module/component/artiste/artiste.component';
-import { AuthComponent } from './login-module/component/auth/auth.component';
+import {HttpClientModule} from '@angular/common/http';
+import {LoginModule} from './login-module/login.module';
+import {PortalModule} from './portal-module/portal.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SidebarComponent,
-    HeaderContentComponent,
-    ContentComponent,
-    ArtisteComponent,
-    AuthComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    LoginModule,
+    PortalModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
