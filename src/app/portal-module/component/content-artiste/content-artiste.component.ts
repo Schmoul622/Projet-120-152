@@ -29,6 +29,7 @@ export class ContentArtisteComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe( result => {
       console.log("The dialog was closed")
+      this.onGetArtistes();
       newArtiste = result;
       console.log(newArtiste);
     })
@@ -48,39 +49,13 @@ export class ContentArtisteComponent implements OnInit {
     );
   }
 
-  onSaveArtiste(artiste: Artiste): void{
-    this._artisteService.addArtiste(artiste).subscribe(
-      data =>
-      {
-        if (data)
-        {
-          this.onGetArtistes();
-        }
-      },
-      error =>
-      {}
-    );
-  }
-
   onDeleteArtiste(artiste: Artiste): void{
-    debugger;
     this._artisteService.deleteArtiste(artiste).subscribe(() => this.onGetArtistes())
   }
 
-  saveArtiste():void{
-    this.onSaveArtiste(this.artiste);
-    this.artiste = {} as Artiste;
-  }
+
 
   deleteArtiste(artiste: Artiste): void{
     this.onDeleteArtiste(artiste);
-  }
-
-  showAddCharacterButton(): void{
-    this.idAddArtisteButtonHidden = false;
-  }
-
-  hideAddCharacterButton(): void{
-    this.idAddArtisteButtonHidden = true;
   }
 }

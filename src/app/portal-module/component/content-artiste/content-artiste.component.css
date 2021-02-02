@@ -24,8 +24,8 @@
 
 #add_artiste{
   float: right;
-  padding-right: 40px;
-  padding-top: 30px;
+  margin-right: 40px;
+  margin-top: 22px;
 }
 
 #hide_artiste{

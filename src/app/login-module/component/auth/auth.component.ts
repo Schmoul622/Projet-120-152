@@ -23,9 +23,11 @@ export class AuthComponent implements OnInit {
 
   onLogin(): void {
     this.authService.login(this.login);
-    if (this.authService.isAuthenticated) {
+    if (this.authService.isAuthenticated)
+    {
       this.router.navigate(['portal']);
-    } else {
+    } else
+    {
       this.isWrongCredentials = true;
     }
   }

@@ -1,16 +1,11 @@
 <div id="body">
   <div id="content-header">
-    <p style="cursor:pointer;" id="add_artiste"
-       [hidden]="!idAddArtisteButtonHidden"
-       (click)="showAddCharacterButton();">Add a artiste
-    </p>
-    <button mat-raised-button (click)="openDialog()">Ajouter un artiste</button>
+    <button id="add_artiste" mat-raised-button (click)="openDialog()">Ajouter un artiste</button>
   </div>
-
   <div id="content" class="show_add_artiste mt-5">
-    <app-artiste *ngFor="let currentArtiste of artistes"
-                  (artisteSelected)="deleteArtiste($event)"
-                  [artiste]="currentArtiste">
-    </app-artiste>
+      <app-artiste *ngFor="let currentArtiste of artistes"
+                    (artisteSelected)="deleteArtiste($event)"
+                    [artiste]="currentArtiste">
+      </app-artiste>
   </div>
 </div>

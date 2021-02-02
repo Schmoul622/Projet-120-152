@@ -8,13 +8,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {PortalComponent} from './component/portal/portal.component';
 import { ContentAlbumComponent } from './component/content-album/content-album.component';
-import { ArtisteMgtComponent } from './component/artiste-mgt/artiste-mgt.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { DialogAddArtisteComponent } from './component/dialog-add-artiste/dialog-add-artiste.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DialogAddImageArtisteComponent } from './component/dialog-add-image-artiste/dialog-add-image-artiste.component';
+import { MaterialFileInputModule } from 'ngx-material-file-input' ;
 
 @NgModule({
   declarations: [
@@ -24,9 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ArtisteComponent,
     PortalComponent,
     ContentAlbumComponent,
-    ArtisteMgtComponent,
     DialogAddArtisteComponent,
-
+    DialogAddImageArtisteComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +36,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MaterialFileInputModule
   ]
 })
 export class PortalModule {}
