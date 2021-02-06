@@ -2,7 +2,7 @@
   width: inherit;
   height: inherit;
   overflow: hidden;
-  background: #CF4A41;
+  background: #000000;
 }
 
 #logo{
@@ -22,7 +22,7 @@
   text-decoration: none;
   font-size: 1.5em;
   font-weight: 300;
-  color: #FFFFFF;
+  color: #B39F79;
 }
 
 #logo p
@@ -32,12 +32,12 @@
   padding: 0px 0px 0px 0px;
   letter-spacing: 1px;
   font-size: 1.2em;
-  color: #FFFFFF;
+  color: #B39F79;
 }
 
 #logo p a
 {
-  color: #FFFFFF;
+  color: #B39F79;
 }
 
 #menu
@@ -72,12 +72,12 @@
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 300;
-  color: #FFFFFF;
+  color: #B39F79;
 }
 
 #menu a:hover, #menu .current_page_item a
 {
   text-decoration: none;
   border-radius: 5px;
-  color: #FFFFFF;
+  color: #B39F79;
 }

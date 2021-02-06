@@ -1,5 +1,23 @@
 #menu{
   float: left;
-  width: 20%;
-  padding-left: 0px;
+  width: 15%;
+}
+
+#content{
+  background: #fafafa;
+  width: 85%;
+  height: 700px;
+  float: right;
+}
+
+html{
+  background: #fafafa;
+}
+
+#page{
+  background: #fafafa;
+}
+
+#body {
+  background-color: #fafafa;
 }

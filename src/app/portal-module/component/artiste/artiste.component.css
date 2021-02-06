@@ -1,37 +1,28 @@
-.artiste{
-  width: 160px;
-  height: 180px;
-  border: 3px solid black;
+.example-card {
+  max-width: 300px;
+  height: auto;
+  margin-left: 20px;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 20px;
-  align-items: center;
-  text-align: center;
+  display: flex;
 }
 
-#infos{
-  margin-bottom: 30px;
+mat-card-content{
+  margin-bottom: -5px;
 }
 
-.artiste #body{
-  padding-top: 30px;
+img{
+  opacity: 0.8;
+  width: 300px;
+  /*height: 300px;*/
 }
 
-#delete_artiste{
+.example-header-image {
+  background-image: url('https://images.vexels.com/media/users/3/149940/isolated/lists/54de4c3f61a5f23cf7bf6f738a068ec4-microphone-mic-doodle.png');
+  background-size: cover;
+}
+
+#delete{
+  display: flex;
   float: right;
-}
-
-#delete_artiste:hover{
-  font-weight: bold;
-  color: red;
-  cursor: pointer;
-}
-
-.img-fluid{
-  height: 120px;
-  width: 120px;
-  border-radius: 20px;
+  position: absolute;
 }

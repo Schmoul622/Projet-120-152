@@ -27,7 +27,6 @@ export class DialogAddArtisteComponent implements OnInit {
     this._artisteService.addArtiste(artiste).subscribe(
       data =>
       {
-
         this.data.artiste = {} as Artiste;
       },
       error =>

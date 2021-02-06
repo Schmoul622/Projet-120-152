@@ -4,24 +4,39 @@ import {DialogAddArtisteComponent} from '../dialog-add-artiste/dialog-add-artist
 import {MatDialog} from '@angular/material/dialog';
 import {ArtisteService} from '../../service/artiste.service';
 import {DialogAddImageArtisteComponent} from '../dialog-add-image-artiste/dialog-add-image-artiste.component';
+import { NgbModalConfig, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {DialogArtisteEditComponent} from '../dialog-artiste-edit/dialog-artiste-edit.component';
 
 @Component({
   selector: 'app-artiste',
   templateUrl: './artiste.component.html',
-  styleUrls: ['./artiste.component.css']
+  styleUrls: ['./artiste.component.css'],
+  providers: [NgbModalConfig, NgbModal]
 })
 export class ArtisteComponent implements OnInit{
   @Input() artiste!: Artiste;
   @Output() artisteSelected = new EventEmitter<Artiste>();
+  url: string;
 
   artistes: Array<Artiste>;
-  constructor(private _artisteService: ArtisteService, public dialog: MatDialog) { }
+  constructor(private _artisteService: ArtisteService,
+              public dialog: MatDialog,
+              config: NgbModalConfig,
+              private modalService: NgbModal) {
+    config.backdrop = 'static';
+    config.keyboard = false;
+  }
 
   ngOnInit(): void {
+    this.url = "https://localhost:5001/artistes/" + this.artiste.Id + "/getAvatar?t="+new Date().getTime();
   }
 
   deleteArtiste(){
     this.artisteSelected.emit(this.artiste);
+  }
+
+  getSingleArtiste(): void{
+    this._artisteService.getCurrentArtiste(this.artiste);
   }
 
   onGetArtistes(): void{
@@ -39,17 +54,29 @@ export class ArtisteComponent implements OnInit{
   }
 
   openDialog(): void{
-    let newArtiste: Artiste;
     const dialogRef = this.dialog.open(DialogAddImageArtisteComponent, {
-      width: '300px',
+      width: '250px',
       data: {artiste: this.artiste}
     });
 
     dialogRef.afterClosed().subscribe( result => {
-      console.log("The dialog was closed")
       this.onGetArtistes();
-      newArtiste = result;
-      console.log(newArtiste);
+      this.url = "https://localhost:5001/artistes/" + this.artiste.Id + "/getAvatar?t="+new Date().getTime();
+    })
+  }
+
+  open(content) {
+    this.modalService.open(content);
+  }
+
+  openDialogEdit(): void{
+    const dialogRef = this.dialog.open(DialogArtisteEditComponent, {
+      width: '300px',
+      data: {artiste: this.artiste}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.onGetArtistes();
     })
   }
 }

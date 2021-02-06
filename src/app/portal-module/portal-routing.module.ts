@@ -13,7 +13,7 @@ const routes: Routes = [
     children: [
         { path: '', component: ContentArtisteComponent},
         { path: 'artiste', component: ContentArtisteComponent},
-        { path: 'album', component: ContentAlbumComponent}
+        { path: 'album', component: ContentAlbumComponent},
       ]
   }
 ];

@@ -1,5 +1,15 @@
-#menu{
-  float: left;
-  width: 20%;
-  padding-left: 0px;
+html{
+  background: #fafafa;
+}
+
+#body{
+  background: #fafafa;
+}
+
+.mat-typography{
+  background: #fafafa;
+}
+
+#mat-typography{
+  background: #fafafa;
 }

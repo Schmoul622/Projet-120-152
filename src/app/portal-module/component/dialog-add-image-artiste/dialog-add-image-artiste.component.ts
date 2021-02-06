@@ -23,22 +23,16 @@ export class DialogAddImageArtisteComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  saveImageArtiste(): void{
-    this.onSaveImageArtiste();
-  }
-
-  onSaveImageArtiste(event, id: number): void{
+  SaveImageArtiste(event): void{
     let File: FileList = event.target.files;
     if (File.length > 0){
-      this._artisteService.AddImageArtiste(id, File[0]).subscribe(
+      this._artisteService.AddImageArtiste(this.data.artiste.Id, File[0]).subscribe(
         reponse =>
         {
           console.log(reponse);
-          window.location.reload();
         },
         error => {}
       );
     }
   }
-
 }

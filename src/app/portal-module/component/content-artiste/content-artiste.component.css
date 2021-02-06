@@ -1,70 +1,18 @@
-#body{
-  background: beige;
-  width: 80%;
-  height: 700px;
-  float: right;
-}
-
-.show_add_character{
-  width: 160px;
-  height: 300px;
-  border: 1px solid black;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  padding: 20px;
-}
 
 #content-header{
   height: 80px;
-  background: beige;
-  border-bottom: 1px solid black;
+  background: #fafafa;
 }
 
 #add_artiste{
   float: right;
   margin-right: 40px;
-  margin-top: 22px;
-}
-
-#hide_artiste{
-  float: right;
-  padding-right: 40px;
-  padding-top: 30px;
-}
-
-.show_artiste{
-  width: auto;
-  height: auto;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-.show_artiste input{
-  width: 90%;
-}
-
-.show_artiste #bodyArtiste{
-  padding-top: 25px;
-}
-
-#form-add{
-  border-right: 1px solid black;
-}
-
-#hide_artiste{
-  float: right;
-}
-
-#hide_artiste:hover{
-  font-weight: bold;
-  cursor:pointer;
-}
-
-#button_save{
   margin-top: 20px;
+}
+
+#slogan{
+  margin-top: 30px;
+  float: left;
+  font-family: Garamond, serif;
+  padding-left: 35%;
 }

@@ -7,15 +7,18 @@ import {PortalRoutingModule} from './portal-routing.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {PortalComponent} from './component/portal/portal.component';
-import { ContentAlbumComponent } from './component/content-album/content-album.component';
+import {ContentAlbumComponent} from './component/content-album/content-album.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { DialogAddArtisteComponent } from './component/dialog-add-artiste/dialog-add-artiste.component';
+import {DialogAddArtisteComponent} from './component/dialog-add-artiste/dialog-add-artiste.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { DialogAddImageArtisteComponent } from './component/dialog-add-image-artiste/dialog-add-image-artiste.component';
-import { MaterialFileInputModule } from 'ngx-material-file-input' ;
+import {DialogAddImageArtisteComponent} from './component/dialog-add-image-artiste/dialog-add-image-artiste.component';
+import {MaterialFileInputModule} from 'ngx-material-file-input' ;
+import {MatCardModule} from '@angular/material/card';
+import {DialogArtisteEditComponent} from './component/dialog-artiste-edit/dialog-artiste-edit.component';
+import { AlbumComponent } from './component/album/album.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { MaterialFileInputModule } from 'ngx-material-file-input' ;
     ContentAlbumComponent,
     DialogAddArtisteComponent,
     DialogAddImageArtisteComponent,
+    DialogArtisteEditComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { MaterialFileInputModule } from 'ngx-material-file-input' ;
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
-    MaterialFileInputModule
+    MaterialFileInputModule,
+    MatCardModule
   ]
 })
 export class PortalModule {}

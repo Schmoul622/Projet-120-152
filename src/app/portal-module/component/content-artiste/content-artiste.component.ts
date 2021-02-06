@@ -13,7 +13,6 @@ import {DialogAddArtisteComponent} from '../dialog-add-artiste/dialog-add-artist
 export class ContentArtisteComponent implements OnInit {
   artiste = {} as Artiste;
   artistes: Array<Artiste>;
-  idAddArtisteButtonHidden: boolean = true;
   constructor(private _artisteService: ArtisteService, public dialog: MatDialog) {}
 
   ngOnInit(): void{
@@ -52,8 +51,6 @@ export class ContentArtisteComponent implements OnInit {
   onDeleteArtiste(artiste: Artiste): void{
     this._artisteService.deleteArtiste(artiste).subscribe(() => this.onGetArtistes())
   }
-
-
 
   deleteArtiste(artiste: Artiste): void{
     this.onDeleteArtiste(artiste);

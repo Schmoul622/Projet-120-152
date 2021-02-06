@@ -1,24 +1,29 @@
 <div id="sidebar">
   <ul class="style2">
     <li class="first">
-      <h3>Maecenas luctus lectus</h3>
-      <p>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
+      <h3>Nom - Prénom</h3>
+
+<!--      <div *ngIf="getCurrentArtiste().Name != undefined">-->
+        <p>{{getCurrentArtiste().Name}} {{getCurrentArtiste().FirstName}} plus connu sous le nom de speudo est un rappeur de
+        {{getCurrentArtiste().Age}} ans</p>
+<!--      </div>-->
+
     </li>
     <li>
-      <h3>Integer gravida nibh</h3>
-      <p>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
+      <h3>Début de carrière</h3>
+
+<!--      <div *ngIf="getCurrentArtiste().Name != undefined">-->
+        <p>Il a commencé sa carrière en {{getCurrentArtiste().CarrierStart}}</p>
+<!--      </div>-->
+
     </li>
     <li>
-      <h3>Fusce ultrices fringilla</h3>
-      <p>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
-    </li>
-    <li>
-      <h3>Nulla luctus eleifend</h3>
-      <p>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
-    </li>
-    <li>
-      <h3>Nulla luctus eleifend</h3>
-      <p>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
+      <h3>Page album</h3>
+
+<!--      <div *ngIf="getCurrentArtiste().Name != undefined">-->
+        <p><a href="" routerLink="/portal/album">Cliquez-ici</a> pour accèder à la page album de {{getCurrentArtiste().Speudo}}</p>
+<!--      </div>-->
+
     </li>
   </ul>
 </div>

@@ -1,13 +1,35 @@
-<div class="artiste">
-  <div style="float: left;">
-    <div>
-      <div class="container-fluid" *ngIf="artiste.Picture !== null">
-          <img class="img-fluid mt-2" src="https://localhost:5001/artistes/{{artiste.Id}}/getAvatar" alt="">
-      </div>
-      <div class="container-fluid" *ngIf="artiste.Picture == null">
-        <button id="add_artiste" mat-raised-button (click)="openDialog()">Ajouter une image</button>
-      </div>
-      <h4 class="text-center mt-2"><b>{{artiste.Speudo}}</b></h4>
-    </div>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Voulez-vous vraiment supprimer cet artiste!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
-</div>
+  <div class="modal-body">
+    <p>Si vous supprimer cet artiste, il sera définitivement supprimé ainsi que tous ces albums</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-danger" aria-label="Close" (click)="d('Cross click')">Annuler</button>
+    <button type="button" class="btn btn-outline-dark" (click)="deleteArtiste()" (click)="d('Cross click')">Supprimer</button>
+  </div>
+</ng-template>
+
+<mat-card class="example-card">
+  <div>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title (click)="getSingleArtiste()" style="cursor: pointer">{{artiste.Speudo}}</mat-card-title>
+      <button mat-icon-button color="accent" (click)="open(content)"
+              aria-label="Example icon button with a menu icon"
+              class="position-absolute" style="top:7px; right:15px; cursor: pointer">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <mat-card-subtitle>{{artiste.Age}} ans</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{url}}" alt="Photo de l'artiste">
+    <mat-card-content>
+      <button mat-button (click)="openDialogEdit()">Modifier l'artiste</button>
+      <button mat-button (click)="openDialog()">Modifier l'image</button>
+    </mat-card-content>
+  </div>
+</mat-card>

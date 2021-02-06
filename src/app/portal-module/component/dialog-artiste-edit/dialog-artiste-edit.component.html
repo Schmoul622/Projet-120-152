@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Ajouter un artiste</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Pseudo</mat-label>
+    <input matInput [(ngModel)]="data.artiste.Speudo">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Prénom</mat-label>
+    <input matInput [(ngModel)]="data.artiste.FirstName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Nom</mat-label>
+    <input matInput [(ngModel)]="data.artiste.Name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Age</mat-label>
+    <input matInput [(ngModel)]="data.artiste.Age">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Début de carrière</mat-label>
+    <input matInput [(ngModel)]="data.artiste.CarrierStart">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button (click)="saveArtiste()" [mat-dialog-close]="data.artiste" cdkFocusInitial>Modifier</button>
+</div>

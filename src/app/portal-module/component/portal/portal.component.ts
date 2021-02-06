@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalComponent implements OnInit {
 
+  public idartiste: number;
+
   constructor() { }
 
   ngOnInit(): void {

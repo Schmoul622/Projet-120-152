@@ -1,10 +1,22 @@
 body{
   margin: 0px;
   padding: 0px;
-  background: white;
+  background: #fafafa;
   font-family: 'Dosis', sans-serif;
   font-size: 15px;
   color: #545454
+}
+
+html{
+  background: #fafafa;
+}
+
+#body{
+  background: #fafafa;
+}
+
+.body{
+  background: #fafafa;
 }
 
 h1, h2, h3 {
