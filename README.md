@@ -1,27 +1,21 @@
 # InterfaceGestionArtiste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ce projet est une bibliothèque d'artiste musical ou l'on peut ajouter, modifier, supprimer et voir les infos d'un artiste. L'API utilisé est celle du projet du module 151 mais elle n'est pas
+entièrement utilisé puisqu'elle est censé aussi gérer les albums et les musiques en plus des artistes... ce qui n'est pas gérer dans cette interface par manque de temps pour créer les pages
+restante mais toute façon le principe aurai été exactement le même que pour les artistes.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Lancer la commande `npm i` à la racine du projet pour installer les dépendances (bootstrap et angular material).
 
-## Running unit tests
+## Development server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Lancer la commande `ng serve` à la racine du projet. Et ce rendre sur `http://localhost:4200/` pour voir l'interface.
+username: user
+password: epsic
 
-## Running end-to-end tests
+## Infos supplémentaire sur l'interface
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Lors de la création d'un artiste son image de profil sera automatique null, pour lui en ajouté une il faudra cliquer sur "modifier l'image" une fois l'artiste créer.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Les infos sur la sidebar de gauche ne s'affiche que si on clique sur le speudo d'un artiste.
